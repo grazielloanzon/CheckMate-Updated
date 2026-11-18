@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckMate</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" type="image/png" href="../img/CMicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-logo" href="#Home">
+                <img src="../img/CMlogo.png" alt="CheckMate Logo" style="width: 150px;" class="rounded-pill">
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="left-container">
+            <div class="login-intro">
+                <div class="intro-badge">
+                    <span>✦</span> YOUR COMMUNITY, IN THE LOOP
+                </div>
+                <h1>Good things happen <br>
+                    <span>when we connect.</span>
+                </h1>
+                <p>Log in to discover community events, stay updated, and be part of what's happening around you.</p>
+
+                <div class="intro-points">
+                    <div>
+                        <span class="point-icon"><i class="bx bx-help-circle"></i></span>
+                        <span>
+                            <strong>Discover events</strong>
+                            <small>See upcoming activities and gatherings.</small>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="point-icon"><i class="bx bx-bell"></i></span>
+                        <span>
+                            <strong>Stay informed</strong>
+                            <small>Keep up with community announcements.</small>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="point-icon"><i class="bx bx-community"></i></span>
+                        <span>
+                            <strong>Get involved</strong>
+                            <small>Find ways to join your community.</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <section class="login-card" aria-labelledby="loginTitle">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h2 id="loginTitle">Log in to CheckMate</h2>
+                <p class="login-subtitle">
+                    Enter your account details to continue.
+                </p>
+
+                <form id="loginForm" novalidate>
+                    <label for="email">Email address</label>
+                    <div class="input-wrap">
+                        <span aria-hidden="true"><i class="bx bx-envelope"></i></span>
+                        <input id="email" name="email" type="email" autocomplete="username"
+                            placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="field-error" id="emailError"></div>
+
+                    <div class="password-label">
+                        <label for="password">Password</label>
+                        <button type="button" class="forgot-button" id="forgotButton">
+                            Forgot password?
+                        </button>
+                    </div>
+
+                    <div class="input-wrap">
+                        <span aria-hidden="true"><i class="bx bx-lock-keyhole"></i></span>
+                        <input id="password" name="password" type="password" autocomplete="current-password"
+                            placeholder="Enter your password" required minlength="4">
+                        <button type="button" class="show-password" id="showPassword" aria-label="Show password">
+                            Show
+                        </button>
+                    </div>
+
+                    <div class="field-error" id="passwordError"></div>
+                    <label class="remember-row">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="custom-check"></span>
+                        <span>Remember me on this device</span>
+                    </label>
+                    <button class="button button-primary login-submit" type="submit">
+                        Log In <span aria-hidden="true">→</span>
+                    </button>
+
+                    <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+                </form>
+
+                <div class="login-divider">
+                    <span>ACCOUNT ACCESS</span>
+                </div>
+
+                <p class="account-access">
+                    Sign in with your registered CheckMate account.
+                    Your assigned role determines which portal opens.
+                </p>
+                <p class="login-footer-note">
+                    Having trouble signing in? Contact your community administrator.
+                </p>
+                <p class="signup-prompt">
+                    Don't have an account?
+                    <a href="signup.html">Sign up</a>
+                </p>
+            </section>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

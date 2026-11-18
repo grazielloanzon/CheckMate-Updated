@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckMate</title>
+    <link rel="stylesheet" href="../css/citizen.css">
+    <link rel="icon" type="image/png" href="../img/CMicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-logo" href="citizen.html#home">
+                <img src="../img/CMlogo.png" alt="CheckMate Logo" style="width: 150px;" class="rounded-pill">
+            </a>
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="citizen.html#home" data-citizen-nav="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="citizen.html#upcoming" data-citizen-nav="events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="citizenLogout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="citizen-home-section" class="citizen-section checkmate-placard">
+
+        <!-- NOTIFICATION BELL -->
+        <li class="nav-item notif-item">
+            <button type="button" class="notif-bell" id="citizenNotifBtn" aria-label="Notifications"
+                aria-expanded="false">
+                <i class="bx bx-bell"></i>
+                <span class="notif-badge" id="citizenNotifBadge" hidden>0</span>
+            </button>
+            <div class="notif-panel" id="citizenNotifPanel" hidden></div>
+        </li>
+
+        <div class="main-TOPcontent">
+            <div class="main-content">
+                <p class="content-top-text">WELCOME TO CHECKMATE</p>
+                <h1 class="content-middle-text">Welcome, Citizen!</h1>
+                <p class="content-bottom-text">Stay updated with what's happening in your community.</p>
+
+                <a href="citizen.html#upcoming" class="view-event-btn">
+                    View Events
+                </a>
+            </div>
+        </div>
+
+        <section class="featured-events">
+            <div class="featured-header">
+                <h2>Featured Events</h2>
+                <p>Discover activities and upcoming events in Barangay San Dionisio, Parañaque City.</p>
+            </div>
+
+            <div class="featured-events-container">
+                <div class="empty-events">
+                    <i class="bx bx-calendar"></i>
+                    <h3>Featured events</h3>
+                    <p class="featured-description">
+                        Discover the latest activities, programs, and community events
+                        happening in Barangay San Dionisio, Parañaque City.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+    <!-- EVENTS -->
+    <main id="citizen-events-section" class="citizen-section mainContainer checkmate-placard" style="display:none;">
+
+        <!-- EVENTS PAGE NOTIFICATION -->
+        <li class="nav-item notif-item">
+            <button type="button" class="notif-bell" id="citizenNotifBtnEvents" aria-label="Notifications"
+                aria-expanded="false">
+                <i class="bx bx-bell"></i>
+                <span class="notif-badge" id="citizenNotifBadgeEvents" hidden>0</span>
+            </button>
+            <div class="notif-panel" id="citizenNotifPanelEvents" hidden></div>
+        </li>
+
+        <section class="topContainer">
+            <p class="top-text">WHAT'S HAPPENING NEAR YOU</p>
+
+            <div class="top-content">
+                <h1>Community Events</h1>
+                <p>San Dionisio | Find an activity, make a plan, and join your community.</p>
+            </div>
+        </section>
+
+        <section class="event-tools">
+
+            <div class="event-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="citizen.html#upcoming" class="nav-link" data-event-status="upcoming">Upcoming</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="citizen.html#ongoing" class="nav-link" data-event-status="ongoing">Ongoing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="citizen.html#completed" class="nav-link" data-event-status="completed">Completed</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="searchBar" id="citizenSearchForm" role="search">
+                <select class="form-select category-filter" id="categoryFilter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="Community">Community</option>
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Culture">Culture</option>
+                    <option value="Public Service">Public Service</option>
+                </select>
+
+                <div class="search-field">
+                    <i class="bx bx-search"></i>
+                    <input class="form-control" type="search" id="searchInput" placeholder="Search title or category..."
+                        aria-label="Search events" autocomplete="off">
+                </div>
+
+                <button class="btn" type="submit">Search</button>
+            </form>
+
+        </section>
+
+        <section class="events-empty" id="citizenEventsContainer">
+            <i class="bx bx-calendar-event"></i>
+            <h2>Upcoming events</h2>
+            <p>Community upcoming events will appear here.</p>
+        </section>
+
+    </main>
+
+
+    <script src="../js/citizen.js"></script>
+</body>
+
+</html>

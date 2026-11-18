@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckMate | Sign Up</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="icon" type="image/png" href="../img/CMicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-logo" href="#Home">
+                <img src="../img/CMlogo.png" alt="CheckMate Logo" style="width: 150px;" class="rounded-pill">
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+
+        <!-- LEFT SIDE - SAME AS LOGIN -->
+        <div class="left-container">
+            <div class="login-intro">
+                <div class="intro-badge">
+                    <span>✦</span> YOUR COMMUNITY, IN THE LOOP
+                </div>
+
+                <h1>Good things happen <br>
+                    <span>when we connect.</span>
+                </h1>
+
+                <p>Log in to discover community events, stay updated, and be part of what's happening around you.</p>
+
+                <div class="intro-points">
+                    <div>
+                        <span class="point-icon"><i class="bx bx-help-circle"></i></span>
+                        <span>
+                            <strong>Discover events</strong>
+                            <small>See upcoming activities and gatherings.</small>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="point-icon"><i class="bx bx-bell"></i></span>
+                        <span>
+                            <strong>Stay informed</strong>
+                            <small>Keep up with community announcements.</small>
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="point-icon"><i class="bx bx-community"></i></span>
+                        <span>
+                            <strong>Get involved</strong>
+                            <small>Find ways to join your community.</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- RIGHT SIDE - SIGNUP FORM -->
+        <div class="right-container">
+
+            <div class="login-card signup-card">
+
+                <p class="eyebrow">GET STARTED</p>
+
+                <h2>Create an account</h2>
+
+                <p class="login-subtitle">
+                    Join your community and stay connected.
+                </p>
+
+
+                <form onsubmit="signup(event)">
+
+                    <!-- FIRST NAME AND LAST NAME -->
+                    <div class="signup-name-row">
+
+                        <div class="signup-field">
+                            <label for="firstName">First Name</label>
+
+                            <div class="input-wrap">
+                                <i class="bx bx-user"></i>
+                                <input type="text" id="firstName" placeholder="First name" required>
+                            </div>
+                        </div>
+
+                        <div class="signup-field">
+                            <label for="lastName">Last Name</label>
+
+                            <div class="input-wrap">
+                                <i class="bx bx-user"></i>
+                                <input type="text" id="lastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <label for="username">Email Address</label>
+
+                    <div class="input-wrap">
+                        <i class="bx bx-envelope"></i>
+                        <input type="email" id="username" placeholder="you@example.com" required>
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <label for="password">Password</label>
+
+                    <div class="input-wrap">
+                        <i class="bx bx-lock"></i>
+                        <input type="password" id="password" placeholder="Create a password" required>
+
+                        <i class="bx bx-eye-slash" id="togglePassword" style="cursor:pointer;"></i>
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <div class="input-wrap">
+                        <i class="bx bx-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+
+                    <!-- TERMS AND CONDITIONS -->
+                    <label class="remember-row terms-agreement">
+                        <input type="checkbox" id="termsAgreement" required>
+                        <span class="custom-check"></span>
+                        <span>
+                            I agree to the
+                            <a href="#" id="openTerms">Terms and Conditions</a>
+                        </span>
+                    </label>
+
+                    <!-- TERMS AND CONDITIONS POPUP -->
+                    <div class="terms-overlay" id="termsModal">
+                        <div class="terms-modal">
+
+                            <div class="terms-header">
+                                <div>
+                                    <span class="terms-eyebrow">CHECKMATE</span>
+                                    <h2>Terms and Conditions</h2>
+                                    <p>Please read these terms before creating your account.</p>
+                                </div>
+
+                                <button type="button" class="terms-close" id="closeTerms"
+                                    aria-label="Close">&times;</button>
+                            </div>
+
+                            <div class="terms-content">
+
+                                <p><strong>Last updated: November 17, 2026</strong></p>
+
+                                <p>
+                                    Welcome to CheckMate. By creating an account and using this
+                                    platform, you agree to follow the terms and guidelines below.
+                                    If you do not agree, please do not create an account.
+                                </p>
+
+                                <h3>1. Account Registration</h3>
+                                <ul>
+                                    <li>You must provide accurate and complete information when creating an account.
+                                    </li>
+                                    <li>You must not impersonate another person or create an account using someone
+                                        else's information without authorization.</li>
+                                    <li>You are responsible for keeping your login credentials confidential.</li>
+                                    <li>You must notify the platform administrator if you become aware of unauthorized
+                                        access to your account.</li>
+                                </ul>
+
+                                <h3>2. Acceptable Use</h3>
+                                <p>When using CheckMate, you agree not to:</p>
+                                <ul>
+                                    <li>Post false, misleading, fraudulent, or unauthorized event information.</li>
+                                    <li>Harass, threaten, bully, or discriminate against other users.</li>
+                                    <li>Send spam or use the platform for scams or malicious activities.</li>
+                                    <li>Attempt to access another user's account or restricted areas without permission.
+                                    </li>
+                                    <li>Upload or distribute harmful software or content that may compromise the
+                                        platform.</li>
+                                    <li>Use CheckMate for any unlawful purpose.</li>
+                                </ul>
+
+                                <h3>3. Data Privacy</h3>
+                                <p>
+                                    CheckMate collects personal information such as your name,
+                                    email address, and account credentials when you register.
+                                    This information is used to:
+                                </p>
+                                <ul>
+                                    <li>Create and manage your account.</li>
+                                    <li>Provide access to community events and announcements.</li>
+                                    <li>Maintain platform security and prevent unauthorized use.</li>
+                                    <li>Communicate important account or platform updates.</li>
+                                </ul>
+
+                                <p>
+                                    CheckMate should handle personal information in accordance
+                                    with the <strong>Data Privacy Act of 2012 (Republic Act No. 10173)</strong>.
+                                    Users have rights under the law, including the right to be
+                                    informed about the processing of their personal data and,
+                                    subject to applicable conditions, the right to access,
+                                    correct, object to, or request the deletion or blocking of
+                                    their data.
+                                </p>
+
+                                <p>
+                                    Personal information should only be accessed by authorized
+                                    persons and should not be disclosed to unauthorized parties.
+                                    It should be retained only for as long as necessary for the
+                                    stated purposes or as required by applicable law.
+                                </p>
+
+                                <h3>4. Prohibited Activities and Legal Compliance</h3>
+                                <p>
+                                    Users must not use CheckMate to engage in unlawful online
+                                    activities, including unauthorized access, computer-related
+                                    fraud, identity theft, or other prohibited acts under
+                                    applicable Philippine laws, including the
+                                    <strong>Cybercrime Prevention Act of 2012 (Republic Act No. 10175)</strong>.
+                                </p>
+
+                                <h3>5. Community Events and Announcements</h3>
+                                <ul>
+                                    <li>Event details and announcements should be accurate and relevant to the
+                                        community.</li>
+                                    <li>Users should verify event details with the appropriate community administrator
+                                        when necessary.</li>
+                                    <li>CheckMate may update, correct, or remove inaccurate or inappropriate content.
+                                    </li>
+                                    <li>CheckMate does not guarantee that every listed event will proceed as originally
+                                        announced.</li>
+                                </ul>
+
+                                <h3>6. Account Suspension or Termination</h3>
+                                <p>
+                                    The platform administrator may restrict, suspend, or remove
+                                    accounts that violate these terms, misuse the platform, or
+                                    create security or safety concerns. Where appropriate, users
+                                    may be informed of the reason for the action.
+                                </p>
+
+                                <h3>7. Changes to These Terms</h3>
+                                <p>
+                                    These terms may be updated when CheckMate's features,
+                                    policies, or applicable laws change. Users should review
+                                    this section periodically for updates.
+                                </p>
+
+                                <h3>8. Contact and Privacy Concerns</h3>
+                                <p>
+                                    For questions, account concerns, or requests involving
+                                    personal information, contact the CheckMate administrator
+                                    through the official community contact channel.
+                                </p>
+
+                                <h3>9. Acceptance of Terms</h3>
+                                <p>
+                                    By checking the agreement box during registration, you
+                                    acknowledge that you have read and understood these Terms
+                                    and Conditions and agree to follow them.
+                                </p>
+
+                                <p class="terms-disclaimer">
+                                    Note: This is a sample platform terms document for the
+                                    CheckMate project. It is not a substitute for legal advice
+                                    or a complete legal compliance review.
+                                </p>
+
+                            </div>
+
+                            <div class="terms-footer">
+                                <button type="button" class="terms-accept" id="acceptTerms">
+                                    I Agree
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CREATE ACCOUNT BUTTON -->
+                    <button class="button button-primary login-submit" type="submit">
+                        Create Account <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+                <div class="login-divider">
+                    <span>ACCOUNT ACCESS</span>
+                </div>
+
+                <p class="account-access">
+                    Create your CheckMate account to discover community events,
+                    stay updated, and become part of what's happening around you.
+                </p>
+
+                <p class="login-footer-note">
+                    Having trouble creating an account? Contact your community administrator.
+                </p>
+
+                <p class="signup-prompt">
+                    Already have an account?
+                    <a href="index.html">Login</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SIGNUP SUCCESS POPUP -->
+    <div class="modal fade" id="signupSuccessModal" tabindex="-1" aria-labelledby="signupSuccessTitle"
+        aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content signup-success-modal">
+                <div class="modal-body">
+                    <div class="signup-success-icon">
+                        <i class="bx bx-check"></i>
+                    </div>
+                    <h3 id="signupSuccessTitle">Account Created!</h3>
+                    <p>Your CheckMate account has been successfully registered.
+                        You can now log in and explore your community events.</p>
+                    <a href="index.html" class="signup-success-button">Continue to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
